@@ -69,7 +69,6 @@ function draw(){
         }
 
         if(bX + bird.width >= pipe[index].x && bX+bird.width <= pipe[index].x + pipeNorth.width && (bY <= pipe[index].y + pipeNorth.height || bY + bird.height >= pipe[index].y + constant) || bY + bird.height >= canvas.height - fg.height){
-            
             cancelAnimationFrame(id);
             ctx.drawImage(game_over, 0 , canvas.height/2 - game_over.height, game_over.width - 30, game_over.height);
         }
@@ -89,6 +88,6 @@ function draw(){
 
     
 }
-window.onload = function(){
+window.onload = function(){ // Chi su dung cho game nao co images, neu khong thi chi can dung draw()
     draw();
 }
